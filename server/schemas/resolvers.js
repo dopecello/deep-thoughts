@@ -15,7 +15,8 @@ const resolvers = {
       }
       throw new AuthenticationError("Not logged in.");
     },
-    thoughts: async (parent, { username }) => {
+    thoughts: async (parent, { username }, context) => {
+      console.log(context.user);
       const params = username ? { username } : {};
       return Thought.find(params).sort({ createdAt: -1 });
     },
