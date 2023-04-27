@@ -11,7 +11,7 @@ const Profile = () => {
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { username: userParam },
   });
-  const user = data?.me || data?.me || {};
+  const user = data?.me || data?.user || {};
   if (auth.loggedIn() && auth.getProfile().data.username === userParam) {
     return <Navigate to='/profile' />;
   }
