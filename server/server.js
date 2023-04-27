@@ -8,6 +8,8 @@ const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
+  cache: "bounded",
+  persistedQueries: false,
   typeDefs,
   resolvers,
   context: authMiddleware,
