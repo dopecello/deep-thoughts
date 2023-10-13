@@ -10,7 +10,7 @@ There are three areas of dependencies: the root directory, `/client` and `/serve
 
 #### For Live Development
 
-All you need to do, after all dependencies are install is run `npm run develop` in the root directory. This will start the Express and Apollo servers and will also initiate the frontend development environment.
+All you need to do, after all dependencies are installed, is run `npm run develop` in the root directory. This will start the Express and Apollo servers and will also initiate the frontend development environment.
 
 #### Seeding the Database
 
